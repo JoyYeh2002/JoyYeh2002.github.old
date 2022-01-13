@@ -1,17 +1,88 @@
+<!--
 ---
 layout: default
 title: lesson02
 ---
+-->
 
 <div class="lesson02"></div>
 <!-- Intercession 2022 HTML Tutorial Lesson 1-->
 <!-- https://www.w3schools.com/html/html_styles.asp -->
+<!-- Updated 01/13/2022: Added Top Dropdown bar to be consistent with lesson 3.-->
 
 <head>
     <!-- the meta tag gives the overall setting.-->
     <meta charset="UTF-8"> <!-- this included info. UTF-8 is a common character setting. -->
-    <meta name="description" content="This is a website template for lesson 01.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- HTML attributes/properties.-->
+
+    <!-- Lesson 3 has different sample pages, so I make a template dropdown menu to organize.-->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: crimson;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover,.dropdown:hover .dropbtn {
+            background-color: dimgray;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
     <title>Lesson02 Notes</title>
 </head>
 
@@ -20,6 +91,24 @@ title: lesson02
 </html>
 
 <body>
+
+    <!-- The entire navigation bar is made in the body.-->
+    <div class="navbar">
+        <a href="../lesson01/index.html">Lesson01</a></li>
+        <a href="../lesson02/index.html">Lesson02</a></li>
+        <div class="dropdown">
+            <button class="dropbtn">Lesson03
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/Example01">Example01</a>
+                <a href="/Example02">Example02</a>
+                <a href="/Example03">Example03</a>
+                <a href="/Example04">Example04</a>
+            </div>
+        </div>
+        <a href="../lesson04">Lesson04</a></li>
+    </div>
 
     <h2> HTML Tutorials Lesson 02</h2>
 
@@ -84,7 +173,7 @@ title: lesson02
     <bdo dir = "ltr"><bdo dir="rtl">If I do an "rtl" and tehn "ltr", what happens? This text goes from right to left as well</bdo></bdo><br>
     Opps, it's still jumbled.<br>
 
-    <h3> HTML Colors:</h3>
+    <h3> HTML Colors</h3>
     HTML has <a href=https://www.w3schools.com/colors/colors_names.asp target="_blank" rel="noopener noreferrer">140 Standard Colors</a>. <br>
     Some colors I like:
     AntieuqWhite, Cornsilk, CornflowerBlue, DarkGrey, DarkSlateGrey, DarkSlateGray, DeepSkyBlue, Ivory, LightBlue, LightCoral, LightSkyBlue.<br> 
