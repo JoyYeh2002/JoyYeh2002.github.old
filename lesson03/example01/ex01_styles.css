@@ -7,25 +7,27 @@ CSS formatter installed. Now Shift + Alt + F works fine.
 
 :root {
     /* Browser default font-size is 16px, this way 1 rem = 10px */
-    font-size: 62.5%;
+    font-size: 92.5%;
 }
 
 html {
     font-family: "Open Sans", sans-serif;
-    color: var(--fg); /*var( <custom-property-name> , <declaration-value>? ) */
+    color: var(--fg);
+    /*var( <custom-property-name> , <declaration-value>? ) */
     background-color: var(--bg);
     text-size-adjust: none;
 }
 
 body {
-    margin: 0;
-    font-size: 1.6 rem;
+    margin: 20;
+    font-size: 3.2 rem;
     background-color: blanchedalmond;
 }
 
 code {
     font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace !important;
-    font-size: 0.875em; /* please adjust the ace font size accordingly in editor.js */
+    font-size: 1.875em;
+    /* please adjust the ace font size accordingly in editor.js */
 }
 
 /* Don't change font size in headers. */
@@ -33,11 +35,25 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
     font-size: unset;
 }
 
-.left { float: left; }
-.right { float: right; }
-.boring { opacity: 0.6; }
-.hide-boring .boring { display: none; }
-.hidden { display: none !important; }
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.boring {
+    opacity: 0.6;
+}
+
+.hide-boring .boring {
+    display: none;
+}
+
+.hidden {
+    display: none !important;
+}
 
 h1 {
     color: blue;
@@ -45,4 +61,10 @@ h1 {
 
 p {
     color: crimson;
+    font-family: courier;
+    font-size: 160%;
+    border: 2px solid powderblue;
+    padding: 20px;
+    margin:10px;
+
 }

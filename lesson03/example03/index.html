@@ -5,16 +5,16 @@ title: lesson04
 ---
 -->
 
-<div class="example02"></div>
+<div class="example03"></div>
 <!-- Intercession 2022 HTML Tutorial Lesson 1-->
 <!-- https://www.w3schools.com/html/html_styles.asp -->
 
 <head>
     <!-- the meta tag gives the overall setting.-->
     <meta charset="UTF-8"> <!-- this included info. UTF-8 is a common character setting. -->
-    <meta name="description" content="This is a website template for lesson 03 example02.">
+    <meta name="description" content="This is a website template for lesson 03 example03.">
     <!-- HTML attributes/properties.-->
-    <title>Lesson03 Example03 Notes: CSS Style Sheet</title>
+    <title>Lesson03 Example03 Notes: HTML Images</title>
 </head>
 
 <html lang="en-US">
@@ -23,10 +23,74 @@ title: lesson04
 
 <body>
 
-    <h3>Lesson03 Example03: CSS Style Sheet</h3>
-    Here, we try to modify this entire page's look with an external css style sheet.<br>
-    Base the model off of the Data Structures Website.
+    <h3>Lesson03 Example03: HTML Images</h3>
+    <img src="https://cdn.discordapp.com/attachments/732361317821972582/931230494975197214/IMG_2897.jpg"
+        alt="Neighborhood Picture" style=width:40%;padding:3%;>
+    <p> The width and height attributes always define the width and height of the image in pixels.</p>
+    <img src="https://cdn.discordapp.com/attachments/732361317821972582/930908739333161040/unknown.png"
+        alt="A Wholte New World" width=400px height=100px>
+    <p> Use the style attribute to prevent the style sheet from stretching it weird. Style="width:128px;height:128px;"
+    </p>
 
+    <h3>Floating Images</h3>
+    <p><strong>Float the image to the right:</strong></p>
+
+    <p>
+        <img src="https://cdn.discordapp.com/attachments/732361317821972582/931381728419913780/Z.png" alt="Vader"
+            style="float:right;width:200px;padding-left:20px;padding-right:20px;">
+        A paragraph with a floating image. <br>
+        Nulla facilisis rutrum magna, luctus blandit justo viverra vel. Quisque pretium, lacus eget euismod euismod, sem
+        lorem venenatis justo, non vulputate orci risus sed lectus. Duis non erat commodo, tincidunt purus id, mollis
+        turpis. Donec non pellentesque libero, eu iaculis lectus. Nam at massa et lectus pulvinar convallis. Nulla vel
+        dolor sit amet augue aliquam convallis ac quis sapien. Cras fermentum lobortis tellus a ultrices. Vivamus
+        pulvinar mattis ipsum, eget ultrices est interdum non. <br>
+
+        Mauris ut ultrices enim. Aliquam a risus felis. Vivamus malesuada mauris sed hendrerit posuere. Integer eu nisl
+        euismod, faucibus lacus nec, viverra nisi. Nunc volutpat venenatis lectus, et feugiat tortor pellentesque non.
+        Suspendisse a leo at nibh auctor iaculis in sit amet sem. Proin non elit a sem venenatis pulvinar. Aenean
+        vehicula ultrices accumsan. <br>
+    </p>
+
+    <p><strong>Float the image to the left:</strong></p>
+    <p>
+        <img src="https://cdn.discordapp.com/attachments/732361317821972582/931381728419913780/Z.png" alt="Vader"
+            style="float:left;width:200px;padding-left:20px; padding-right: 20px;">
+        Quisque orci mi, convallis ac dignissim eu, molestie ac enim. Nunc id dignissim turpis, ac vehicula nunc. Nullam
+        efficitur vestibulum nisl et egestas. Vestibulum porttitor quam non quam viverra, ut placerat nibh facilisis.
+        Cras arcu quam, porta eu rutrum non, accumsan sed dui. Duis vel viverra mauris, eget imperdiet enim. Ut nec
+        magna suscipit, accumsan lectus non, eleifend urna. Pellentesque tristique eros et porta tempor. Nunc tempor
+        quam id velit gravida, id semper est iaculis. Pellentesque fermentum sapien et felis semper mattis. Aenean
+        consectetur eleifend commodo. Suspendisse potenti. Aliquam libero ipsum, accumsan ac rhoncus ut, consectetur non
+        ipsum. Sed non vestibulum lorem. <br>
+    </p>
+
+    <h3> Creating an Image map </h3>
+    <a href="https://html.com/images/how-to-make-an-image-map/#Step_2_Create_a_map_to_overlay_the_image"
+        target="_blank"> Creating an Image Map</a> <br>
+    Need something like Microsoft Ruler or Photopea with a ruler to get the coordinates. <br>
+
+    <img src="https://cdn.discordapp.com/attachments/914592573190963310/931383974163525652/158444-phones-review-apple-iphone-13-review-images-image1-clh15n2ocg.png"
+        alt="Phone Image" usemap="#phonemap" style=width:50%;padding-left:25%;padding-top:20px;>
+
+    <map name="phonemap">
+        <!--
+        <area title="an iPhone" shape="poly" coords="350,60, 600,60, 600,600, 350,600" alt="a phone"
+            href="https://searchmobilecomputing.techtarget.com/definition/iPhone#:~:text=The%20iPhone%20is%20a%20smartphone,and%20a%2012%2Dmegapixel%20camera.">
+        -->
+
+        <area title="an iPhone" shape="poly" coords="350,60, 600,60, 600,600, 350,600" alt="a phone"
+            href="https://searchmobilecomputing.techtarget.com/definition/iPhone#:~:text=The%20iPhone%20is%20a%20smartphone,and%20a%2012%2Dmegapixel%20camera.">
+        <area title="a hand" shape="poly" coords="350,350, 350,550, 350,600" alt="a thumb"
+            href="https://www.merriam-webster.com/dictionary/hand#:~:text=1%20%3A%20the%20body%20part%20at,on%20a%20clock%20or%20watch">
+    <!-- The nand part doesn't work because the indices are off.-->
+        </map>
+    <br>
+    <b><mark> Attention: Scaling and moving the image causes the pixels to break because it's relative to the entire
+            webpage.</mark></b>
+    <p> Try to automate image maps with a JavaScript next time.</p>
+
+    <h3> Background Images </h3>
+    
     <!-- commands and notes-->
     <h3>Commands</h3>
     <ul>
