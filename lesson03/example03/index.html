@@ -12,9 +12,21 @@ title: lesson04
 <head>
     <!-- the meta tag gives the overall setting.-->
     <meta charset="UTF-8"> <!-- this included info. UTF-8 is a common character setting. -->
-    <meta name="description" content="This is a website template for lesson 03 example03.">
+
+    <!-- This allows for re-sizing of image elements.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- HTML attributes/properties.-->
     <title>Lesson03 Example03 Notes: HTML Images</title>
+
+    <!-- Add whole-body background image here-->
+    <style>
+        body {
+            background-image: url('https://cdn.discordapp.com/attachments/914592573190963310/931393222327033856/Melamine-wood-005.png');
+            color: white;
+            font-size: larger;
+        }
+    </style>
 </head>
 
 <html lang="en-US">
@@ -73,24 +85,60 @@ title: lesson04
         alt="Phone Image" usemap="#phonemap" style=width:50%;padding-left:25%;padding-top:20px;>
 
     <map name="phonemap">
-        <!--
-        <area title="an iPhone" shape="poly" coords="350,60, 600,60, 600,600, 350,600" alt="a phone"
-            href="https://searchmobilecomputing.techtarget.com/definition/iPhone#:~:text=The%20iPhone%20is%20a%20smartphone,and%20a%2012%2Dmegapixel%20camera.">
-        -->
 
         <area title="an iPhone" shape="poly" coords="350,60, 600,60, 600,600, 350,600" alt="a phone"
             href="https://searchmobilecomputing.techtarget.com/definition/iPhone#:~:text=The%20iPhone%20is%20a%20smartphone,and%20a%2012%2Dmegapixel%20camera.">
         <area title="a hand" shape="poly" coords="350,350, 350,550, 350,600" alt="a thumb"
             href="https://www.merriam-webster.com/dictionary/hand#:~:text=1%20%3A%20the%20body%20part%20at,on%20a%20clock%20or%20watch">
-    <!-- The nand part doesn't work because the indices are off.-->
-        </map>
+        <!-- The nand part doesn't work because the indices are off.-->
+    </map>
     <br>
     <b><mark> Attention: Scaling and moving the image causes the pixels to break because it's relative to the entire
             webpage.</mark></b>
     <p> Try to automate image maps with a JavaScript next time.</p>
 
     <h3> Background Images </h3>
-    
+    <p> A background image for a div element: </p>
+    <div
+        style="background-image: url('https://cdn.discordapp.com/attachments/914592573190963310/931391865222205450/Melamine-wood-001.png'); color:black;">
+
+        <b>Use (div style="..."), along with other attributes, to change this section.<br></b>
+        Everything inside this div element will have a wood background image. It will also repeat itself if needed. <br>
+        Quisque orci mi, convallis ac dignissim eu, molestie ac enim. Nunc id dignissim turpis, ac vehicula nunc. Nullam
+        efficitur vestibulum nisl et egestas. Vestibulum porttitor quam non quam viverra, ut placerat nibh facilisis.
+        Cras arcu quam, porta eu rutrum non, accumsan sed dui. Duis vel viverra mauris, eget imperdiet enim. Ut nec
+        magna suscipit, accumsan lectus non, eleifend urna. Pellentesque tristique eros et porta tempor. Nunc tempor
+        quam id velit gravida, id semper est iaculis. Pellentesque fermentum sapien et felis semper mattis. Aenean
+        consectetur eleifend commodo. Suspendisse potenti. Aliquam libero ipsum, accumsan ac rhoncus ut, consectetur non
+        ipsum. Sed non vestibulum lorem. <br>
+
+        <pre>
+        this works too in the beginning of the file: 
+        (style)
+            div {
+              background-image: url('img_girl.jpg');
+            }
+            (/style)
+    </pre>
+    </div>
+
+    <h3> The Picture Element</h3>
+    <picture>
+        <source media="(min-width:100px)" srcset="https://cdn.discordapp.com/attachments/914592573190963310/931397042838851685/33326dcddbf15c56d631e374b62338dc.png" style=width:100px;>
+        <img src="https://cdn.discordapp.com/attachments/914592573190963310/931383974163525652/158444-phones-review-apple-iphone-13-review-images-image1-clh15n2ocg.png" style="width:auto;">
+    </picture>
+
+    <p>Resize the browser to see different versions of the picture loading at different viewport sizes.
+        The browser looks for the first source element where the media query matches the user's current viewport width,
+        and fetches the image specified in the srcset attribute.</p>
+        
+        <p>The img element is required as the last child tag of the picture declaration block.
+        The img element is used to provide backward compatibility for browsers that do not support the picture element, or if none of the source tags matched.
+        </p>
+
+        <p> The floppa picture doensn't work, but the words now can auto switch lines as the browser size changes.</p>
+
+
     <!-- commands and notes-->
     <h3>Commands</h3>
     <ul>
