@@ -1,0 +1,54 @@
+/* Style sheet for stuff beginning from lesson03 example04. */
+
+.content p {
+    color: crimson;
+    font-size: 30px;
+}
+
+/*
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-radius: 9px;
+}
+*/
+th, td {
+    border-radius: 8px;
+    background-color: #9528d463;
+    color: rgb(0, 0, 0);
+    border-color: #24d298;
+    border-width: 3px;
+    padding: 15px;
+
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    border-spacing: 30px;
+}
+
+th {
+    text-align: left;
+}
+
+/* zebra stripes wihth :nth-child(even) */
+tr:nth-child(odd) {
+    background-color: #4fb6b6;
+}
+
+/* vertical zebra stripes */
+td:nth-child(even), th:nth-child(even) {
+    background-color: #b4c93e;
+}
+
+.border-bottom tr {
+    border-bottom: 8px solid rgb(0, 0, 0);
+}
+
+.border-bottom tr:hover {
+    background-color: #D6EEEE;
+}
+
+.border-bottom caption {
+    color: tomato;
+}
