@@ -13,10 +13,12 @@ title: lesson04
     <!-- the meta tag gives the overall setting.-->
     <meta charset="UTF-8"> <!-- this included info. UTF-8 is a common character setting. -->
     <meta name="description" content="This is a website template for lesson 04.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- HTML attributes/properties.-->
     <title>Lesson04 Notes</title>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link rel="stylesheet" href="file:///D:/Winter_2021/HTML/JoyYeh2002.github.io/css/style.css">
+    <base href="https://www.w3schools.com/" target="_blank">
 </head>
 
 <html lang="en-US">
@@ -24,6 +26,17 @@ title: lesson04
 </html>
 
 <body>
+
+    <nav>
+        <ul>
+        <li><a href="file:///D:/Winter_2021/HTML/JoyYeh2002.github.io/lesson04/example01/index.html">Go to Example01 with W3.css</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/cv">CV</a></li>
+        <li><a href="/blog">Blog</a></li>
+     
+        </ul>
+            </nav>
+
 
     <div class="content">
         <p>Notes for 01/17/2022.</p>
@@ -135,14 +148,153 @@ title: lesson04
         <li>Milk</li>
     </ul>
 
+    <!-- Send class name into javascript-->
+    <h2>Use of The class Attribute in JavaScript</h2>
+    <p>Click the button to hide all elements with class name "city":</p>
+
+    <button onclick="myFunction()">Hide elements</button>
+    <button onclick="showFunction()">Show elements</button>
+
+    <h2 class="city">London</h2>
+    <p>London is the capital of England.</p>
+
+    <h2 class="city">Paris</h2>
+    <p>Paris is the capital of France.</p>
+
+    <h2 class="city">Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementsByClassName("city");
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+        }
+
+        /* This doesn't work */
+        function showFunction() {
+            var x = document.getElementsByClassName("city");
+            for (var i = 0; i < x.length; i++) {
+                x[i].color = "blue";
+            }
+        }
+    </script>
+
+    <!-- ID vs. div-->
+    <p> The main difference between div id and div class is that the div id involves assigning an id attribute to a
+        specific div element to apply styling or interactivity to that element, while div class involves assigning the
+        class attribute to several div elements to apply styling or interactivity to a set of div elementsS</p>
+
+    <h3>Using The id Attribute in JavaScript</h3>
+    <p>JavaScript can access an element with a specified id by using the getElementById() method:</p>
+
+    <h1 id="myHeader">Hello World!</h1>
+    <button onclick="displayResult()">Change text</button>
+    <button onclick="changeItBack()">Change it back</button>
+
+    <script>
+        function displayResult() {
+            document.getElementById("myHeader").innerHTML = "Have a nice day!";
+        }
+        function changeItBack() {
+            document.getElementById("myHeader").innerHTML = "Have a fantastic day!";
+        }
+    </script>
+
+    <!-- I frame for displaying frame inside a frame.-->
+    iframe src="url" title="description /iframe <br>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24864.831644878876!2d-121.27436800000001!3d38.83008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54d00f9ff09304d9%3A0xb97a8aed8f1dd5!2sWhitney%20High%20School!5e0!3m2!1sen!2sus!4v1642454431243!5m2!1sen!2sus"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3086.3734519281415!2d-76.62508958550703!3d39.32512362922463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c8058eb1d4beef%3A0xd830df190269a08f!2sWyman%20Park%20Building!5e0!3m2!1sen!2sus!4v1642375268457!5m2!1sen!2sus"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+    <!-- A JavaScript -->
+    <h3>My First JavaScript</h3>
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+        Click me to display Date and Time.</button>
+
+    <p id="demo"></p>
+
+    <h3>My Second JavaScript</h3>
+    <p id="demo">JavaScript can change the style of an HTML element.</p>
+
+
+    <button type="button" onclick="myFunction()">Click Me to change style!</button>
+    <script>
+        function myFunction() {
+            document.getElementById("demo").style.fontSize = "25px";
+            document.getElementById("demo").style.color = "red";
+            document.getElementById("demo").style.backgroundColor = "yellow";
+            document.getElemcntById("demo").style.padding = "10px";
+        }
+    </script>
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+    <!-- This is a light bulb script. -->
+    <p>Here, a JavaScript changes the value of the src (source) attribute of an image.</p>
+
+    <script>
+        function light(sw) {
+            var pic;
+            if (sw == 0) {
+                pic = "pic_bulboff.gif"
+            } else {
+                pic = "pic_bulbon.gif"
+            }
+            document.getElementById('myImage').src = pic;
+        }
+    </script>
+
+    <img id="myImage" src="pic_bulboff.gif" width="100" height="180">
+
+    <p>
+        <button type="button" onclick="light(1)">Light On</button>
+        <button type="button" onclick="light(0)">Light Off</button>
+    </p>
+
+
+    <p> It is best practice to use relative file paths (if possible).
+
+        When using relative file paths, your web pages will not be bound to your current base URL. All links will work
+        on your own computer (localhost) as well as on your current public domain and your future public domains.</p>
+
+    <h3> Meta Tags </h3>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    This gives the browser instructions on how to control the page's dimensions and scaling.
+
+    The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary
+    depending on the device).
+
+    The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+
+    Here is an example of a web page without the viewport meta tag, and the same web page with the viewport meta tag:
+
+    <h3>HTML base tags</h3> 
+    <p><img src="images/stickman.gif" width="24" height="39" alt="Stickman"> - Notice that we have only specified a
+        relative address for the image. Since we have specified a base URL in the head section, the browser will look
+        for the image at "https://www.w3schools.com/images/stickman.gif".</p>
+
+    <p><a href="tags/tag_base.asp">HTML base tag</a> - Notice that the link opens in a new window, even if it has no
+        target="_blank" attribute. This is because the target attribute of the base element is set to "_blank".</p>
+
+        <h3> Responsive Stuff </h3>
+        <p> This image has max-width=100% so it never gets larger than it should be. </p>
+        <img src="https://cdn.discordapp.com/attachments/691053255450689607/930345048476893214/Screen_Shot_2022-01-11_at_1.18.32_AM.png" style="max-width:100%; height: auto;">
+<p> Responsive text wtih vw: view port width </p>
+<h1 style="font-size:10vw">Hello World</h1>
+
+
+
+
 
     <!-- commands and notes-->
-    <h3>Commands</h3>
-    <ul>
-        <li> </li>
-    </ul>
 
-    <hr>
 
     <h3>Notes</h5>
         <ul>
